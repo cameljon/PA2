@@ -52,7 +52,6 @@ int main()
             {
                 cout << "You can't attack yourself. Pick again!" << endl;
             }
-
         }
 
         //NPC's turn
@@ -68,7 +67,6 @@ int main()
                     notSuicide = true;
                 }
             }
-
             playerHP[attackWho] -= 5;
             cout << "Player " << i << " attacks player " << attackWho << " for 5 damage!" << endl;
         }
