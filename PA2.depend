@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1474666198 source:f:\code\source\pa2\pa2\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+
