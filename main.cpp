@@ -67,19 +67,25 @@ int main()
                     notSuicide = true;
                 }
             }
-            playerHP[attackWho] -= 5;
-            cout << "Player " << i << " attacks player " << attackWho << " for 5 damage!" << endl;
+			if (playerHP[i] > 0 && playerHP[attackWho] > 0)
+			{
+				playerHP[attackWho] -= 5;
+				cout << "Player " << i << " attacks player " << attackWho << " for 5 damage!" << endl;
+			}
         }
 
-        //Check if someone is dead
-        for (int i = 0; i < 4; i++)
-        {
-            if (playerHP[i] <= 0)
-            {
-                cout << "Player " << i << " is dead!" << endl;
-                done = true;
-            }
-        }
+        //Check if user is dead or all npcs are dead.
+		if (playerHP[1] <= 0 && playerHP[2] <= 0 && playerHP[3] <= 0)
+		{
+			cout << "ALL NPCs are dead!" << endl;
+			done = true;
+		}
+		else if (playerHP[0] <= 0)
+		{
+			cout << "You died!" << endl;
+			done = true;
+		}
+
         round++;
         cout << endl << "---------------------------------------------------------------------" << endl;
 	}
