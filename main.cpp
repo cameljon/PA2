@@ -11,7 +11,7 @@ int main()
 	int round = 1;
 	bool notSuicide;
 	bool done = false;
-        int attackWho;
+    int attackWho;
 
 	while (!done)
 	{
